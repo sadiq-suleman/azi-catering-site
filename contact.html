@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="earthy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote / Check Availability | The Long Table Catering</title>
+  <meta name="description" content="Tell us about your event in three quick steps — date and guest count, food preferences, and how to reach you. We reply with availability and a custom quote within one business day." />
+  <link rel="canonical" href="https://www.thelongtable.example/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand">The Long <span>Table</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menus.html">Menus</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn--primary" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" style="min-height:38vh">
+      <img class="page-hero__img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=70" alt="A warmly set table ready for a catered event" width="2000" height="1333" />
+      <div class="container">
+        <div class="page-hero__inner">
+          <p class="eyebrow" style="color:var(--accent-2)">Let's talk</p>
+          <h1>Tell us about your event</h1>
+          <p>Three quick steps. We'll reply with availability and a real quote within one business day.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="container crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> / <span>Contact</span>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- FORM -->
+          <div class="form-wrap" style="margin:0">
+            <div class="form-card">
+              <!-- Progress indicator -->
+              <ol class="progress" aria-hidden="true">
+                <li class="progress__step is-active">Event details</li>
+                <li class="progress__step">Food preferences</li>
+                <li class="progress__step">Your info</li>
+              </ol>
+
+              <form id="inquiry-form" novalidate
+                    action="https://formspree.io/f/your-form-id" method="POST">
+
+                <!-- STEP 1 — EVENT DETAILS -->
+                <fieldset class="form-step is-active" aria-label="Step 1: Event details">
+                  <legend style="padding:0"><h2 style="margin-bottom:0.25rem">Event details</h2></legend>
+                  <p class="hint" style="margin-bottom:1.5rem">Step 1 of 3 — the basics so we can check the calendar.</p>
+
+                  <div class="field">
+                    <label for="event_date">Event date <span class="req" aria-hidden="true">*</span></label>
+                    <input type="date" id="event_date" name="event_date" required />
+                    <span class="error-msg">Please choose your event date.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="event_type">Event type <span class="req" aria-hidden="true">*</span></label>
+                    <select id="event_type" name="event_type" required>
+                      <option value="" disabled selected>Choose one…</option>
+                      <option>Wedding</option>
+                      <option>Corporate / office</option>
+                      <option>Private party</option>
+                      <option>Milestone (birthday, anniversary, shower)</option>
+                      <option>Other / not sure yet</option>
+                    </select>
+                    <span class="error-msg">Please select an event type.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="guest_count">Estimated guest count <span class="req" aria-hidden="true">*</span></label>
+                    <input type="number" id="guest_count" name="guest_count" min="1" max="2000" inputmode="numeric" placeholder="e.g. 80" required />
+                    <p class="hint">A rough number is fine — you can firm it up later.</p>
+                    <span class="error-msg">Please enter an approximate guest count.</span>
+                  </div>
+
+                  <div class="form-actions">
+                    <div class="spacer"></div>
+                    <button type="button" class="btn btn--primary" data-next>Continue →</button>
+                  </div>
+                </fieldset>
+
+                <!-- STEP 2 — FOOD PREFERENCES -->
+                <fieldset class="form-step" aria-label="Step 2: Food preferences">
+                  <legend style="padding:0"><h2 style="margin-bottom:0.25rem">Food preferences</h2></legend>
+                  <p class="hint" style="margin-bottom:1.5rem">Step 2 of 3 — help us dream up your menu. All optional.</p>
+
+                  <div class="field">
+                    <label for="cuisine">Cuisine style / vibe</label>
+                    <select id="cuisine" name="cuisine">
+                      <option value="" disabled selected>Choose a direction…</option>
+                      <option>Seasonal American</option>
+                      <option>Mediterranean</option>
+                      <option>Global / mix it up</option>
+                      <option>Comfort &amp; classic</option>
+                      <option>Grazing &amp; small plates</option>
+                      <option>Surprise us</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label>Dietary needs to plan around</label>
+                    <p class="hint" style="margin-top:0;margin-bottom:0.75rem">Select any that apply — we cater all of them.</p>
+                    <div class="chips">
+                      <label class="chip"><input type="checkbox" name="dietary" value="Vegetarian" /><span>Vegetarian</span></label>
+                      <label class="chip"><input type="checkbox" name="dietary" value="Vegan" /><span>Vegan</span></label>
+                      <label class="chip"><input type="checkbox" name="dietary" value="Gluten-free" /><span>Gluten-free</span></label>
+                      <label class="chip"><input type="checkbox" name="dietary" value="Nut-free" /><span>Nut-free</span></label>
+                      <label class="chip"><input type="checkbox" name="dietary" value="Dairy-free" /><span>Dairy-free</span></label>
+                      <label class="chip"><input type="checkbox" name="dietary" value="Halal" /><span>Halal</span></label>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="notes">Anything else we should know?</label>
+                    <textarea id="notes" name="notes" placeholder="Allergies, service style, must-have dishes, budget per person, venue details…"></textarea>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="button" class="btn btn--back" data-back>← Back</button>
+                    <div class="spacer"></div>
+                    <button type="button" class="btn btn--primary" data-next>Continue →</button>
+                  </div>
+                </fieldset>
+
+                <!-- STEP 3 — CONTACT INFO -->
+                <fieldset class="form-step" aria-label="Step 3: Your contact info">
+                  <legend style="padding:0"><h2 style="margin-bottom:0.25rem">Your info</h2></legend>
+                  <p class="hint" style="margin-bottom:1.5rem">Step 3 of 3 — where should we send your quote?</p>
+
+                  <!-- Quick review of what they entered -->
+                  <div class="summary" id="review-summary"></div>
+
+                  <div class="field">
+                    <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" required />
+                    <span class="error-msg">Please tell us your name.</span>
+                  </div>
+
+                  <div class="field-row">
+                    <div class="field">
+                      <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                      <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+                      <span class="error-msg">Please enter a valid email.</span>
+                    </div>
+                    <div class="field">
+                      <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                      <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(503) 555-0000" required />
+                      <span class="error-msg">Please enter a phone number.</span>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="contact_method">Preferred contact method</label>
+                    <select id="contact_method" name="contact_method">
+                      <option>Email</option>
+                      <option>Phone call</option>
+                      <option>Text message</option>
+                    </select>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="button" class="btn btn--back" data-back>← Back</button>
+                    <div class="spacer"></div>
+                    <button type="submit" class="btn btn--primary">Send my inquiry</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+
+          <!-- ASIDE: direct contact -->
+          <aside class="contact-info" aria-label="Other ways to reach us">
+            <div class="item">
+              <h3>Prefer email?</h3>
+              <p>The form is easiest, but a note works just as well — we read every one personally.</p>
+            </div>
+            <div class="item">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@thelongtable.example">hello@thelongtable.example</a></p>
+            </div>
+            <div class="item">
+              <h3>Where we cook</h3>
+              <p>Based in Portland, OR<br />Serving the greater Portland area, by appointment.</p>
+            </div>
+            <div class="item">
+              <h3>Lead time</h3>
+              <p>Weddings &amp; larger events: 6–8 weeks is ideal.<br />Smaller gatherings: often a week or two. Ask us — we do our best to squeeze in the good ones.</p>
+            </div>
+            <div class="item">
+              <h3>Not ready to book?</h3>
+              <p>Browse the <a href="menus.html">seasonal menus</a> or see <a href="services.html">what's included</a> first.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">The Long Table</a>
+          <p>Seasonal, personal catering for weddings, gatherings, and celebrations around Portland — cooked in small batches, with care.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menus.html">Menus</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Events</h4>
+          <ul>
+            <li><a href="services.html#weddings">Weddings</a></li>
+            <li><a href="services.html#corporate">Corporate</a></li>
+            <li><a href="services.html#private">Private events</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="mailto:hello@thelongtable.example">hello@thelongtable.example</a></li>
+            <li>Portland, OR &middot; by appointment</li>
+            <li><a href="contact.html">Request a quote →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> The Long Table. All rights reserved.</span>
+        <nav class="footer-legal" aria-label="Legal"><a href="privacy.html">Privacy</a> <span aria-hidden="true">&middot;</span> <a href="cookies.html">Cookies</a> <span aria-hidden="true">&middot;</span> Seasonal &amp; locally sourced</nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

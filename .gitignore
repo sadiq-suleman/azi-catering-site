@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Local tooling (preview config) — not needed on the live site
+.claude/
+
+# Dependencies (none used, but just in case)
+node_modules/
