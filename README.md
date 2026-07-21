@@ -1,6 +1,6 @@
-# The Long Table — Website
+# Azi Catering — Website
 
-A fast, dependency-free website for **The Long Table**, a small seasonal
+A fast, dependency-free website for **Azi Catering**, a small seasonal
 catering studio (weddings, gatherings, and private celebrations). Plain
 HTML/CSS/JS — no build step, no frameworks. Open `index.html` and it works.
 
@@ -29,17 +29,17 @@ kitchen"), so keep new copy in the same voice.
 ## Hosting it free on GitHub Pages
 
 GitHub Pages publishes your site to the public web (e.g.
-`https://yourname.github.io/the-long-table/`) for free. Note: it hosts it
+`https://yourname.github.io/azi-catering/`) for free. Note: it hosts it
 *online*, not "locally" — for a purely local preview, see the next section.
 
 This repo is already a git repository with an initial commit and an auto-deploy
 workflow. To publish:
 
-1. **Create an empty repo on GitHub** (e.g. `the-long-table`). Don't add a
+1. **Create an empty repo on GitHub** (e.g. `azi-catering`). Don't add a
    README/license — this project already has files.
 2. **Connect and push** (run these in this folder, filling in your username):
    ```bash
-   git remote add origin https://github.com/YOUR-USERNAME/the-long-table.git
+   git remote add origin https://github.com/YOUR-USERNAME/azi-catering.git
    git branch -M main
    git push -u origin main
    ```
@@ -64,8 +64,8 @@ python -m http.server 8000    # then open http://localhost:8000
 ## Making it yours
 
 ### Brand name
-Find/replace `The Long Table` (and the wordmark markup
-`The Long <span>Table</span>` in each page's nav). Contact email lives in each
+Find/replace `Azi Catering` (and the wordmark markup
+`Azi <span>Catering</span>` in each page's nav). Contact email lives in each
 footer and the home-page JSON-LD.
 
 ### Colors — swap the whole palette in one line
@@ -106,7 +106,7 @@ handling can receive submissions with no third-party service.
 ## Cookies & privacy
 
 The site sets **no tracking cookies**. `js/main.js` shows a one-time consent
-notice and remembers dismissal in `localStorage` (key `tlt-cookie-consent`).
+notice and remembers dismissal in `localStorage` (key `azi-cookie-consent`).
 `privacy.html` and `cookies.html` document this in plain English. If you later
 add analytics, list it in `cookies.html` and only load it after consent.
 
@@ -128,8 +128,10 @@ add analytics, list it in `cookies.html` and only load it after consent.
 - [ ] Replace Unsplash images with your own licensed photography (incl. a real
       founder photo on `about.html`).
 - [ ] Add your real founder name/story on `about.html` (currently generic).
-- [ ] Point the form `action` at a real endpoint and enable the `fetch()`.
-- [ ] Replace `thelongtable.example` URLs (canonical, OG, sitemap, robots) with
+- [x] ~~Point the form at a real endpoint~~ — **done.** Connected to Formspree
+      (`https://formspree.io/f/xjgnygyj`). Next: connect Formspree → Excel with
+      Zapier (see `FORM-SETUP.md`), and confirm the form's email once in Formspree.
+- [ ] Replace `azicatering.example` URLs (canonical, OG, sitemap, robots) with
       your real domain.
 - [ ] Swap the placeholder reviews on `testimonials.html` and the home page for
       real, permissioned quotes as you get them.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thelongtable.example/sitemap.xml
+Sitemap: https://www.azicatering.example/sitemap.xml
