@@ -56,7 +56,7 @@ keeping the descriptive `alt` text. Hero ~2000px wide, gallery thumbs ~600px.
 - **Accessibility** — skip link, ordered headings, keyboard-navigable nav /
   lightbox / form, visible focus rings, `prefers-reduced-motion`.
 
-## Still needs YOU before launch
+## Still needs to be done before launch
 
 - [ ] Replace Unsplash images with your own licensed photography (incl. a real
       founder photo on `about.html`).
