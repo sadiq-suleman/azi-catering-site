@@ -58,14 +58,13 @@ keeping the descriptive `alt` text. Hero ~2000px wide, gallery thumbs ~600px.
 
 ## Still needs to be done before launch
 
-- [ ] Replace Unsplash images with your own licensed photography (incl. a real
+- [ ] Replace Unsplash images with personal photography (incl. a
       founder photo on `about.html`).
-- [ ] Add your real founder name/story on `about.html` (currently generic).
+- [ ] Add full founder name/story on `about.html` (currently placeheld).
       (`https://formspree.io/f/xjgnygyj`). 
 - [ ] Replace `azicatering.example` URLs (canonical, OG, sitemap, robots) with
-      your real domain.
+      final domain.
 - [ ] Swap the placeholder reviews on `testimonials.html` and the home page for
-      real, permissioned quotes as you get them.
-- [ ] Confirm menus/prices and the "Summer 2026" seasonal label are accurate.
-- [ ] (Optional) Add a real phone number if you want one — it was removed to
-      avoid showing a fake number.
+      real quotes.
+- [ ] Confirm menus/prices and specials are accurate
+- [ ] add real phone numb
